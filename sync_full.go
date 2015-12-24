@@ -94,12 +94,6 @@ func main() {
 	c = make(chan int)
 	go Producer(item)
 	go Consumer(item)
-	go Consumer(item)
-	go Consumer(item)
-	go Consumer(item)
-	<-c
-	<-c
-	<-c
 	<-c
 	fmt.Println("-- Full Data Sync Complete!")
 }
